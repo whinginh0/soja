@@ -236,10 +236,10 @@
         .progress-bar-fill {
             height: 100%;
             width: 0%;
-            background: linear-gradient(90deg, var(--support), #81c784);
+            background: linear-gradient(90deg, var(--support), var(--support-dark));
             border-radius: 99px;
             transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 0 10px rgba(76, 175, 80, 0.45);
+            box-shadow: 0 0 10px rgba(211, 84, 0, 0.45);
         }
 
         .progress-message {
@@ -294,7 +294,7 @@
         .section-line {
             flex: 1;
             height: 1px;
-            background: linear-gradient(90deg, rgba(76, 175, 80, 0.4), transparent);
+            background: linear-gradient(90deg, rgba(211, 84, 0, 0.25), transparent);
         }
 
         .section-badge {
@@ -696,7 +696,7 @@
 
         // Redirect to login if credentials are missing
         if (!userEmail) {
-            window.location.href = 'login.html';
+            window.location.href = '/login';
         }
 
         // Persist session
@@ -723,7 +723,7 @@
             localStorage.removeItem('member_email');
             localStorage.removeItem('member_name');
             localStorage.removeItem('member_plano');
-            window.location.href = 'login.html';
+            window.location.href = '/login';
         }
 
         // ── Materials Data ──
